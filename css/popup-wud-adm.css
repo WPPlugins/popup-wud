@@ -1,0 +1,210 @@
+/* Admin CSS */
+.wp-picker-container, .wp-picker-container:active {
+    float: right;
+}
+.popup-wud-adm .wp-color-result{
+	float: right;
+	margin: 0;
+}
+.wp-picker-open+.wp-picker-input-wrap {
+    margin-left: 92px;
+    margin-top: 4px;
+}
+.popup-wud-overlay{
+	width: 92%;
+    height: 80%;
+	display:none;
+}
+.popup-wud-action{
+	min-height:40px; 
+	border-bottom: solid 1px rgba(0, 0, 0, 0.19)
+}
+.popup-wud-bottom{
+	min-height:140px; 
+	margin-top: 20px;
+	border-bottom: solid 1px rgba(0, 0, 0, 0.19)
+}
+.ui-datepicker{
+	display:none;
+}
+.popup-wud-adm{
+	padding-bottom: 6px;
+	border-bottom: 1px solid #cac7c7;
+    width: 100%;
+}
+.popup-wud-adm label {
+	white-space: nowrap;
+}
+
+.popup-wud-adm select:hover,.popup-wud-adm input:hover {
+	border-color: #999;
+}
+
+.popup-wud-adm select:hover,.popup-wud-adm .date-picker:hover {
+	cursor: pointer;
+}
+
+.popup-wud-adm .popup-wud-max {
+	min-width: 100px;
+	max-width: 140px;
+}
+
+.popup-wud-adm .iris-picker .iris-square-value {
+	width: 0;
+	height: 0;
+	margin: -1px 0;
+}
+
+.popup-wud-adm .iris-picker a:focus {
+	color: transparent;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.popup-wud-action .popup-wud-test {
+	font-size: 13px;
+	color: #fff;
+    background: #006799;
+    white-space: nowrap;
+    border: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+	float: left;
+	height: 30px;
+	line-height: 28px;
+}	
+
+.popup-wud-action .popup-wud-test:hover {
+	color: #fff !important;
+    background: #0073aa !important;
+}
+
+.popup-wud-logo {
+	float:right;
+	padding-right: 2%;	
+	max-height: 120px;
+}
+
+#popup_wud_td{
+	max-width: 140px;
+}
+/* One line input fields */
+dt { 
+	display: inline; 
+}
+
+dd { 
+    margin: 0; /* Margin fields */
+    display: inline; 
+}
+
+/* range slider */
+
+input[type="range"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;	
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  width: 140px;
+  height: 8px;
+  margin: 0;
+  border: none;
+  background: #9A9A9A;
+  box-shadow: inset 0 0 0 0 #0d0e0f, inset 0 0 0 0 #3a3d42;
+  -webkit-box-shadow: inset 0 0 0 0 #0d0e0f, inset 0 0 0 0 #3a3d42;
+  outline: none; 
+}
+
+input[type="range"]::-moz-range-track {
+  border: inherit;
+  background: transparent;
+}
+
+input[type="range"]::-ms-track {
+  border: inherit;
+  color: transparent; 
+  background: transparent;
+}
+
+input[type="range"]::-ms-fill-lower,
+input[type="range"]::-ms-fill-upper {
+  background: transparent;
+}
+
+input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+/* thumb / button */
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 18px;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #7B7676)); /* android <= 2.2 */
+  background-image: -webkit-linear-gradient(top , #FFFFFF 0, #7B7676 100%); /* older mobile safari and android > 2.2 */;
+  background-image: linear-gradient(to bottom, #FFFFFF 0, #7B7676 100%); /* W3C */
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 18px;
+  border: none;
+  background-image: linear-gradient(to bottom, #FFFFFF 0, #7B7676 100%); /* W3C */
+}
+
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 18px;
+  border: 0;
+  background-image: linear-gradient(to bottom, #FFFFFF 0, #7B7676 100%); /* W3C */
+}
+input, select {
+	margin: 0;
+    padding: 0;
+}
+
+
+/*  Removes tooltip in IE from the slider */
+::-ms-tooltip { display: none; }
+
+/* Select items */
+
+select {
+  padding: 5px 35px 5px 5px;
+  font-size: 14px;
+  height: 34px;
+  background:  #ccc;
+}
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+
+
+#popup-wud-tip {
+    position: relative;
+    width: 100%;
+}
+
+#popup-wud-tip > .tooltip{
+    position: absolute;
+    display: none;
+    background-color: #4297C1;     
+    width: 220px;    
+    right: 10px;
+    top: 10px; 
+    padding: 10px;
+    color: white;
+	z-index: 100;
+}
+
+#popup-wud-tip > .tooltip:before {
+  
+}
+.popup-trigger{
+	float:right !important;
+	cursor:help;
+}
+#popup-wud-tip > .popup-trigger:hover + .tooltip {
+    display: block;
+}

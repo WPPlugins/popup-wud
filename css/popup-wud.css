@@ -1,0 +1,213 @@
+/* === Popup WUD ===
+https://wordpress.org/plugins/popup-wud/
+*/
+
+
+html.popup-wud-open, html.popup-wud-open body {
+	overflow: hidden;
+}
+
+/* Complete screen */
+#cssWUD {
+	all: initial;
+	color: #000;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 999999;
+	display: none;
+	background-color: rgba(0,0,0,0.4);
+}
+
+/* Popup box */
+#cssWUD .wud-dialog {
+	height: 100%;
+	width: 100%;
+}
+
+
+#cssWUD .wud-dialog.allow-scrolling {
+	overflow-y: auto;
+}
+
+/* Popup OUTER content */
+#cssWUD .wud-content {
+	max-height: 99.9%;
+	max-width: 99.9%;
+}
+
+/* Popup ALL ACTIVE content */
+#cssWUD .wud-body {
+	background-color: #fff;
+	padding: 4%;
+	-webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+	 box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	 border-radius: 4px;
+}
+
+#cssWUD .wud-body img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* Title*/
+#cssWUD .wud-title {
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+
+/* Content below the title */
+#cssWUD .wud-body-content {
+    hyphens: auto;
+	margin-bottom: 0.5em;
+}
+
+/* Popup Close button */
+#cssWUD .wud-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+	cursor: pointer;
+	background: #000;
+	color: #fff;
+}
+
+/* Popup Close button */
+#cssWUD .wud-close-button {
+	display: none;
+	padding: 1%;
+    white-space: nowrap;
+    border: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+#cssWUD .wud-close:after {
+	display: inline-block;
+	content: "\00d7";
+	font-family: Arial;
+}
+
+#cssWUD .wud-close:hover {
+	font-weight: bold;
+}
+
+/* Popup Print button */
+#cssWUD .wud-print-button {
+	padding: 1%;
+    white-space: nowrap;
+    border: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+#cssWUD .wud-print:after {
+	display: inline-block;
+	content: "\00d7";
+	font-family: Arial;
+}
+
+#cssWUD .wud-print:hover {
+	font-weight: bold;
+}
+
+#cssWUD .wud-print-button {
+	display: none;
+	margin-right: 1%;
+}
+
+#cssWUD .wud-buttons {
+	clear: both;
+	margin-top: 1%;
+}
+
+/* Popup button position */
+#cssWUD.wud-buttons-left .wud-buttons {
+	display: block;
+	text-align: left;
+}
+
+#cssWUD.wud-buttons-right .wud-buttons {
+	display: block;
+	text-align: right;
+}
+
+#cssWUD.wud-buttons-center .wud-buttons {
+	display: block;
+	text-align: center;
+}
+
+#cssWUD.wud-buttons-left .wud-close, #cssWUD.wud-buttons-right .wud-close, #cssWUD.wud-buttons-center .wud-close {
+	display: none;
+}
+
+
+/* Mobile CSS popup */
+@media screen and (max-width: 600px) {
+	#cssWUD .wud-body {
+		padding: 1em;
+	}
+
+	#cssWUD .wud-close {
+		mix-blend-mode: difference;
+	}
+}
+
+
+/* ################################### */
+
+
+
+/* Print popup */
+@media print {
+	body>* {
+		display: none;
+	}
+
+	#cssWUD {
+		display: block !important;
+		background: none !important;
+		background-color: #fff !important;
+	}
+
+	#cssWUD * {
+		background-color: #fff !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	#cssWUD .wud-dialog {
+		position: absolute;
+		width: 100% !important;
+		max-width: 100%;
+		top: 5%;
+		left: 0;
+		-ms-transform: none;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	#cssWUD .wud-content {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	#cssWUD .wud-close, #cssWUD .wud-buttons {
+		display: none !important;
+	}
+}
